@@ -1,16 +1,12 @@
-﻿using System;
-using System.Drawing;
-
+﻿using System.Drawing;
 
 namespace ClassLibrary2
 {
-    [Serializable()]
-    public class Shape
+    public abstract class Shape
     {
-        public virtual Graphics Draw(Graphics Space, Pen Color)
-        {
-            return Space;
-        }
+        public Color Color { get; } = Color.Black;
+
+        public abstract void Draw(IDrawable drawable);
 
     }
 }
